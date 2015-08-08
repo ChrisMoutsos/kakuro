@@ -630,7 +630,7 @@ void PuzzleBoard::clearBoard() {
 }
 
 void PuzzleBoard::drawBoard() {
-    updateCellArray(cellsInfo);
+    cellsInfo = getCellsInfoFromCellArray();
     for (int r = 0; r < rows; r++) {
         for (int c = 0; c < cols; c++) {
             cellArray[r][c].draw();
