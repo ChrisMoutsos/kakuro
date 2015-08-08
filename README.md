@@ -16,3 +16,4 @@ The icons are from @Templarian's [Modern UI Icons](https://github.com/Templarian
 
 ![Screenshot1](http://i.imgur.com/5KAfq2r.png)
 ![Screenshot2](http://i.imgur.com/EngWyDW.png)
+![Screenshot3](http://i.imgur.com/T8Y3mUW.png)
