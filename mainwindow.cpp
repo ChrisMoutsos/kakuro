@@ -22,6 +22,7 @@ MainWindow::MainWindow() {
     timerId = 0;
     board = 0;
     newGameD = 0;
+    settingsD = 0;
 
     setColorsDefault();
 
@@ -156,7 +157,6 @@ void MainWindow::newGame() {
 
 void MainWindow::makeNewGame() {
     if (!newGameD) return;
-    qDebug() << "making";
     QString s = board->generateBoard(newRows, newCols);
     makePuzzleBoard(s);
     newGameD->close();
@@ -477,10 +477,9 @@ void MainWindow::settings() {
     for (int i = 20; i <= 100; i+=5) {
         cellSizeCombo->addItem(QString::number(i) + "px", i);
     }
-
     QGroupBox *colorGroup = new QGroupBox(tr("Colors"));
     QLabel *colorInfo = new QLabel("Enter colors using hexadecimal format.");
-    QLabel *colorLabels[6];
+    QLabel *colorLabels[7];
     colorLabels[CLUECOLOR] = new QLabel(tr("Clue background color:"));
     colorLabels[NONCLUECOLOR] = new QLabel(tr("Non-clue background color:"));
     colorLabels[CLUETEXTCOLOR] = new QLabel(tr("Clue text color:"));
