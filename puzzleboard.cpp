@@ -2841,7 +2841,8 @@ QString PuzzleBoard::generateBoard(int rows, int cols) const {
                             break;
                     }
                 }
-                if (board->cellArray[cell.row][cell.col].getFixed())
+                if (cell.row == -1 || cell.col == -1 ||
+                        board->cellArray[cell.row][cell.col].getFixed())
                     makeNewClues = true;
                 if (makeNewClues)
                     break;
